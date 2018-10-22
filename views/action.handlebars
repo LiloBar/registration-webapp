@@ -1,0 +1,22 @@
+
+<h1 id="h1">Greeted names</h1>
+
+<table id="greeted">
+    <tr>
+                 
+                    <th>Name</th>
+                    <th>count</th>
+                 
+    </tr> 
+            {{#each greetedNames}}
+
+               <tr>
+                       <td><a href="/reNum/{{user_name}}" name='greetName' >{{user_name}}</a></td>
+                        <td>{{count}}</td>
+                       
+                </tr>
+            {{/each}}
+
+</table>
+
+  <a href="/"><button type="button" class="home btn btn-success btn-lg" id="home" name="Homebtn">Home</button></a>

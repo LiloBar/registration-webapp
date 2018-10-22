@@ -1,0 +1,127 @@
+body {
+  background-color: #33FFBD;
+}
+  
+  .head{
+    text-align: center;
+    font-weight: bold;
+    font-size: 6em;
+    color: #ccc;
+  }
+  .container{
+    font-size: 2em;
+    font-weight: bold;
+    background: #3949AB;
+    height: 80%;
+  }
+  
+  
+  input[type=text], select {
+      width: 15em;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+  /* css from w3 school */
+  .form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    /* background-color: #fff; */
+    border: 1px solid #ddd;
+  }
+  
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    /* color: white; */
+    cursor: pointer;
+  }
+  
+  .alert{
+    color: white;
+    text-align: center;
+  }
+  .dropdown {
+    background-color:#1A237E;
+    width: 10em;
+    padding: 5px;
+    color: antiquewhite
+  }
+
+  .dropdownSelect {
+width: 10em;
+background-color: ;
+  }
+  .row {
+    padding: 5px 20px;
+    display:inline-block;
+  }
+  .town {
+    margin-left: 15%;
+    color: antiquewhite;
+    font-weight: bolder;
+  }
+  .towns {
+    margin-left: 6%;
+    color: antiquewhite;
+    font-weight: bolder;
+  }
+  li{
+    width: 8em;
+    text-align: center;
+    border-radius: 5px;
+    padding: ;
+    margin-left: 5px;
+    margin-top: 15px;
+    display:inline-block;
+    background-color: white;
+    border: 2px solid black;
+    height: 2em;
+    color: black;
+    font-weight: bold;
+  }
+  .display{
+    text-align: left;
+    margin-top:20%;
+  
+  }
+  
+ 
+  .icon-btn {
+    padding:8px;
+    background:#ffffff;
+    margin-right:4px;
+    font-weight: bold;
+}
+.icon-btn {
+    padding: 1px 15px 3px 2px;
+    border-radius:50px;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: 2em;
+    font-weight: bold;
+    background: #3949AB;
+    height: 100%;
+  }
+}

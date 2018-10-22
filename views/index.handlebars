@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+ <h1 class="head">Registration numbers</h1>
+
+  <div class="container">
+
+   
+
+
+<div class="form-inline">
+    <h1 class="towns">Enter registration number:</h1>
+    <form class="form-inline" action="/reg_numbers" method="post">
+      <input class="textInput" type="text" name="text" value="" placeholder="eg. CA 465-647" maxlength="12" required>
+      <input style=" font-size: 20px; width: 4em; border-radius: 5px;" class="btn btn-success btn-lg" type="submit" name="add" value="Add">
+    </form> 
+
+</div>
+
+    <div class="alert">
+      {{#if message}}
+      <span>{{message}}</span>
+      {{/if}}
+    </div>
+
+    <div class="row">
+
+      <h1 class="town">Select Your Town: </h1>
+      <select class="dropdown">
+        <option name="All" class="dropdownSelect" value="All">All Towns</option>
+        <option name="CapeTown" class="dropdownSelect" value="CA ">Cape Town</option>
+        <option name="Ceres" class="dropdownSelect" value="CT">Ceres</option>
+        <option name="Strand" class="dropdownSelect" value="CEY">Strand</option>
+        <option name="Paarl" class="dropdownSelect" value="CJ">Paarl</option>
+        <option name="Malmesbury" class="dropdownSelect" value="CK">Malmesbury</option>
+      </select>
+
+      <a href="/reset">
+      <button style=" font-size: 25px;" type="button" class="clearBtn btn btn-danger btn-lg icon-btn icon-btn">Reset</button>
+    </a>
+    </div>
+
+
+   
+      <ul class="display">
+        {{#each display}}
+        <li class="reg-number">{{reg_number}}</li>
+        {{/each}}
+      </ul>
+  </div>
+</body>
