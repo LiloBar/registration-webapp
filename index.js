@@ -46,21 +46,28 @@ const pool = new Pool({
 
 const registrations = RegNumber(pool)
 
-app.post("/reg_numbers", async function(req ,res){
+app.post("/reg_numbers", async function (req, res) {
 
-let text = req.body.text;
-let message = await registrations.inputReg(text);
-let display = await registrations.allCars();
+  let text = req.body.text;
+  let message = await registrations.inputReg(text);
+  let display = await registrations.allCars();
+  let towns = await registrations.getTowns();
 
-  res.render("index" , {display, message})
-  
+  res.render("index", {
+    display,
+    message,
+    towns
+  })
+
 })
 
 
 app.get('/', async function (req, res) {
-
-
-  res.render('index');
+  // console.log('towns', await registrations.getTowns());
+  
+  res.render('index', {
+    towns: await registrations.getTowns()
+  });
 
 });
 
@@ -68,32 +75,28 @@ app.get('/', async function (req, res) {
 
 app.get('/filter/:town', async function (req, res) {
 
-        let town = req.params.town;
+  let town = req.params.town;
 
-        res.render('index', {
-          display: await registrations.regFilter(town)
-        });
+  res.render('index', {
+    display: await registrations.regFilter(town),
+    towns: await registrations.getTowns()
+  });
 
-      });
+});
 
-      app.get('/reset', async function (req, res, next) {
-        try {
-          await registrations.resetDataBase()
-      
-      
-          res.render('index')
-        } catch (err) {
-          return next(err)
-        }
-      
-      });
+app.get('/reset', async function (req, res, next) {
+  try {
+    await registrations.resetDataBase()
+
+
+    res.render('index')
+  } catch (err) {
+    return next(err)
+  }
+
+});
 
 let PORT = process.env.PORT || 3008;
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log('App starting on port', PORT);
 });
-  
-
-
-
-

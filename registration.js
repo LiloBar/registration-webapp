@@ -50,12 +50,18 @@ module.exports = function (pool) {
    //return results.rows
  }
 
+ async function getTowns() {
+   const result = await pool.query('select * from towns');
+   return result.rows;
+ }
+
   return {
     inputReg,
     plates,
     resetDataBase,
    allCars,
-   regFilter
+   regFilter,
+   getTowns
   }
 
 }

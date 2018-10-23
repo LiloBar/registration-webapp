@@ -34,11 +34,9 @@
       <h1 class="town">Select Your Town: </h1>
       <select class="dropdown">
         <option name="All" class="dropdownSelect" value="All">All Towns</option>
-        <option name="CapeTown" class="dropdownSelect" value="CA ">Cape Town</option>
-        <option name="Ceres" class="dropdownSelect" value="CT">Ceres</option>
-        <option name="Strand" class="dropdownSelect" value="CEY">Strand</option>
-        <option name="Paarl" class="dropdownSelect" value="CJ">Paarl</option>
-        <option name="Malmesbury" class="dropdownSelect" value="CK">Malmesbury</option>
+        {{#each towns}}
+        <option class="dropdownSelect" value="{{town_tag}}">{{town_name}}</option>
+        {{/each}}
       </select>
 
       <a href="/reset">

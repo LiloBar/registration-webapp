@@ -18,6 +18,15 @@
       filter.addEventListener('change', function(){
         location.href = '/filter/' + filter.value;
       })
+
+      window.addEventListener('load', function(){
+        let url = location.href;
+        let url_parts = url.split('/');
+        let town = document.querySelector('select');
+        town.value = url_parts[url_parts.length - 1];
+      })
+
+
     </script>
 
 
