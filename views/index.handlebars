@@ -15,7 +15,7 @@
 <div class="form-inline">
     <h1 class="towns">Enter registration number:</h1>
     <form class="form-inline" action="/reg_numbers" method="post">
-      <input class="textInput" type="text" name="text" value="" placeholder="eg. CA 465-647" maxlength="12" required>
+      <input class="textInput" type="text" name="text" value="" placeholder="eg. CA 465-647" pattern="[A-Z]{2,3}\s\d{3}\W\d{3}" maxlength="12" required>
       <input style=" font-size: 20px; width: 4em; border-radius: 5px;" class="btn btn-success btn-lg" type="submit" name="add" value="Add">
     </form> 
 
