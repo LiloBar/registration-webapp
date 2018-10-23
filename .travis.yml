@@ -1,0 +1,11 @@
+language: node_js
+
+env:
+  - DATABASE_URL=postgresql://coder:coder123@localhost:5432/registrations
+  
+node_js:
+  - "8.9.4"
+
+before_script:
+  - psql -c 'create database  registrations;' -U postgres
+  - psql -U postgres -d registrations -a -f registrations.sql
