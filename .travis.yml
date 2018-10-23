@@ -1,7 +1,7 @@
 language: node_js
 
 env:
-  - DATABASE_URL=postgresql://postgresql@localhost:5432/registrations
+  - DATABASE_URL=postgresql://coder123@localhost:5432/registrations
   
 node_js:
   - "8.9.4"
