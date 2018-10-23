@@ -6,6 +6,6 @@ env:
 node_js:
   - "8.9.4"
 
-before_script:
+before_script:he
   - psql -c 'create database  registrations;' -U postgres
   - psql -U postgres -d registrations -a -f registrations.sql
