@@ -20,7 +20,7 @@ describe(' registrations', function () {
 
 
     var registraion = allCars(pool);
-    await registraion.inputReg('CA 123-123');
+    await registraion.inputReg('CD 123-123');
 
     let cars = await registraion.allCars()
     assert.equal(cars[0].reg_number, 'CA 123-123' )
