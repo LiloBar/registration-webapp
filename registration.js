@@ -22,6 +22,8 @@ module.exports = function (pool) {
   return "please enter a registration number";
 }
 
+
+
   async function allCars() {
     let result = await pool.query("select * from reg_numbers");
     return result.rows;
