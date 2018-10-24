@@ -46,8 +46,8 @@ module.exports = function (pool) {
   }
 
   async function resetDataBase() {
-    await pool.query('delete from reg_numbers')
-   //return results.rows
+    await pool.query('delete from reg_numbers');
+   return "database cleared";
  }
 
  async function getTowns() {

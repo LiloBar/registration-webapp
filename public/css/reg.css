@@ -1,7 +1,12 @@
 body {
   background-color: #33FFBD;
 }
-  
+  h1 {
+    margin-right: 1rem;
+  }
+select {
+  margin-right: 1rem;
+}
   .head{
     text-align: center;
     font-weight: bold;
@@ -19,12 +24,13 @@ body {
   input[type=text], select {
       width: 15em;
       padding: 12px 20px;
-      margin: 8px 0;
+      margin: 8px;
       display: inline-block;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
   }
+
   /* css from w3 school */
   .form-inline {  
     display: flex;
